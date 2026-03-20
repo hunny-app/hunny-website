@@ -84,7 +84,8 @@ setInterval(updateCountdown, 1000);
 (function initThoughtsCarousel() {
   const root = document.querySelector("[data-thoughts-carousel]");
   const track = document.getElementById("thoughtsTrack");
-  if (!root || !track) {
+  const viewport = root && root.querySelector(".thoughts-viewport");
+  if (!root || !track || !viewport) {
     return;
   }
 
@@ -101,6 +102,22 @@ setInterval(updateCountdown, 1000);
   let index = 0;
   let autoplayId = null;
   let touchStartX = null;
+
+  function slideWidthPx() {
+    const w = viewport.getBoundingClientRect().width;
+    return w > 0 ? w : 0;
+  }
+
+  function applySlideWidths() {
+    const w = slideWidthPx();
+    if (!w) {
+      return;
+    }
+    slides.forEach((el) => {
+      el.style.flex = `0 0 ${w}px`;
+      el.style.width = `${w}px`;
+    });
+  }
 
   function setAria() {
     slides.forEach((slide, i) => {
@@ -121,9 +138,19 @@ setInterval(updateCountdown, 1000);
   function goTo(i) {
     const n = slides.length;
     index = ((i % n) + n) % n;
-    track.style.transform = `translateX(-${index * 100}%)`;
+    const w = slideWidthPx();
+    if (w) {
+      track.style.transform = `translate3d(-${index * w}px, 0, 0)`;
+    } else {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
     setAria();
     updateDots();
+  }
+
+  function layoutAndGo() {
+    applySlideWidths();
+    goTo(index);
   }
 
   function next() {
@@ -225,8 +252,17 @@ setInterval(updateCountdown, 1000);
     { passive: true }
   );
 
-  goTo(0);
-  startAutoplay();
+  if (typeof ResizeObserver !== "undefined") {
+    const ro = new ResizeObserver(() => layoutAndGo());
+    ro.observe(viewport);
+  } else {
+    window.addEventListener("resize", layoutAndGo);
+  }
+
+  requestAnimationFrame(() => {
+    layoutAndGo();
+    startAutoplay();
+  });
 })();
 
 (function initPainSolutionsToggle() {
