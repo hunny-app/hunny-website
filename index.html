@@ -82,18 +82,18 @@
       </div>
     </div>
     <main class="page">
-      <section class="hero-card">
+      <section class="hero-card" id="home">
         <header class="nav">
           <div class="logo-wrap">
             <img class="logo-image" src="./assets/hunny-logo.png" alt="Hunny logo" />
             <span class="logo-text">Hunny</span>
           </div>
           <nav class="menu">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Features</a>
-            <a href="#">Contact Us</a>
-            <a class="login-btn" href="#">Log In</a>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact Us</a>
           </nav>
         </header>
 
@@ -105,12 +105,15 @@
               Create a companion for your family, that checks-in 24 hours a day, no matter where.
             </p>
             <div class="cta-wrap">
-              <a
-                href="https://forms.gle/kX37U6EPFZKsK2ZX6"
-                class="cta"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Join our waitlist!</a>
+              <div class="cta-row" role="group" aria-label="Hero actions">
+                <a
+                  href="https://forms.gle/kX37U6EPFZKsK2ZX6"
+                  class="cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Join our waitlist!</a>
+                <a href="#community-voices" class="cta cta--secondary">Community voices</a>
+              </div>
               <p class="cta-subline">LIMITED SPOTS! APPLY NOW!</p>
             </div>
           </div>
@@ -210,7 +213,23 @@
         </div>
       </section>
 
-      <section class="features-section" aria-label="Hunny features">
+      <section class="alerts-section" aria-label="Family alerts summary preview">
+        <div class="alerts-layout">
+          <div class="features-alerts">
+            <img
+              class="features-alert-image"
+              src="./assets/hunny-alert-1.png"
+              alt="Low mood alert summary card"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="features-section"
+        id="features"
+        aria-label="Hunny features"
+      >
         <div class="features-layout">
           <div class="features-copy">
             <p class="features-kicker">Hunny Features</p>
@@ -227,8 +246,8 @@
               <p>Gentle reminders and updates throughout the day.</p>
             </article>
             <article class="feature-card feature-card-lime">
-              <h3>Healthy Nudges</h3>
-              <p>Prompts for meals, water, rest, and movement.</p>
+              <h3>Easy summary alerts</h3>
+              <p>Personalied summaries and alerts to act on within hours.</p>
             </article>
             <article class="feature-card feature-card-orange">
               <h3>Memory Moments</h3>
@@ -238,6 +257,801 @@
               <h3>24/7 Support</h3>
               <p>Always-on support when loved ones need a companion.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="pain-solutions-section"
+        id="pain-solutions"
+        aria-labelledby="pain-solutions-heading"
+      >
+        <div class="pain-solutions-inner">
+          <p class="features-kicker pain-solutions-kicker">
+            <span class="pain-solutions-emoji" aria-hidden="true">🧠</span>
+            Pain points → Solutions (Hunny)
+          </p>
+          <h2 id="pain-solutions-heading">From worry to clarity</h2>
+          <p class="pain-solutions-lead">
+            Ten common family-care tensions — and how Hunny is designed to
+            respond.
+          </p>
+
+          <ol class="pain-solutions-chart">
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;I don&rsquo;t know if they&rsquo;re okay.&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Caregivers live in constant anxiety when they can&rsquo;t
+                    check on loved ones. The real fear is silence, not
+                    emergencies.
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">Smart daily check-ins + instant alerts</p>
+                  <p>
+                    Hunny gently checks in and notifies you only when something
+                    feels off.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;I don&rsquo;t want to spy or be annoying.&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Existing tools are too invasive (cameras, tracking) or too
+                    manual (calls, texts).
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">Non-intrusive AI companion</p>
+                  <p>
+                    Friendly conversations instead of surveillance — care without
+                    hovering.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;What if I miss something important?&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Early warning signs (missed meds, mood shifts, inactivity)
+                    are often missed until it&rsquo;s too late.
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">Signals, not diagnoses</p>
+                  <p>
+                    Hunny detects subtle changes and surfaces early signals
+                    before crises happen.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ol>
+          <div class="ps-expand-wrap">
+            <button
+              type="button"
+              id="painSolutionsToggle"
+              class="ps-expand-btn"
+              aria-expanded="false"
+              aria-controls="painSolutionsMore"
+            >
+              Show 7 more pain points &amp; solutions
+            </button>
+          </div>
+          <div id="painSolutionsMore" class="ps-more" hidden>
+            <ol class="pain-solutions-chart pain-solutions-chart--more">
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;Everything is scattered and messy.&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Families rely on group chats, spreadsheets, and random apps
+                    — nothing is unified.
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">One simple family dashboard</p>
+                  <p>
+                    All updates, summaries, and alerts in one place.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;Group chats are chaotic.&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Care coordination across family members is disorganized and
+                    overwhelming.
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">Care-circle system</p>
+                  <p>
+                    Shared visibility with structured updates — no more chaos.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;They always say they&rsquo;re fine&hellip; but are they?&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Emotional and mental health is invisible — caregivers lack
+                    real insight.
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">Emotional context insights</p>
+                  <p>
+                    Hunny understands tone, behavior, and engagement — not just
+                    words.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;Tracking everything is exhausting.&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Manual logging (moods, meds, behaviors) is time-consuming
+                    and unsustainable.
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">Automatic tracking through conversation</p>
+                  <p>
+                    No forms, no spreadsheets — it just happens naturally.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;They won&rsquo;t use complicated apps.&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Seniors and others forget, avoid, or reject traditional apps.
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">Zero-friction experience</p>
+                  <p>
+                    Feels like chatting with someone familiar — no learning curve.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;I feel guilty all the time.&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Caregivers feel guilty for not checking enough — or checking
+                    too much.
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">Peace of mind, automatically</p>
+                  <p>
+                    Hunny reduces guilt by always being there in the background.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="ps-row">
+              <p class="ps-quote">&ldquo;There&rsquo;s no app built for families.&rdquo;</p>
+              <div class="ps-split">
+                <div class="ps-pain">
+                  <span class="ps-label">Pain</span>
+                  <p>
+                    Most tools are single-user or clinical — not designed for
+                    real family dynamics.
+                  </p>
+                </div>
+                <div class="ps-connector" aria-hidden="true">→</div>
+                <div class="ps-solution">
+                  <span class="ps-label ps-label--solution">Solution</span>
+                  <p class="ps-solution-title">Family-first design</p>
+                  <p>
+                    Built for shared care, shared visibility, and real
+                    relationships.
+                  </p>
+                </div>
+              </div>
+            </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="thoughts-section"
+        id="community-voices"
+        aria-labelledby="thoughts-heading"
+      >
+        <div class="thoughts-shell">
+          <div class="thoughts-panel">
+          <p class="features-kicker thoughts-section-kicker">Community voices</p>
+          <h2 id="thoughts-heading">What people are thinking</h2>
+          <p class="thoughts-section-lead">
+            Real worries and hopes from families — swipe, use the arrows, or pick a dot.
+          </p>
+
+          <div
+            class="thoughts-carousel"
+            data-thoughts-carousel
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Community thoughts and comments"
+          >
+            <button
+              type="button"
+              class="thoughts-btn thoughts-btn--prev"
+              aria-label="Previous thought"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+
+            <div class="thoughts-viewport">
+              <div class="thoughts-track" id="thoughtsTrack">
+                <article class="thoughts-slide" aria-hidden="false">
+                  <blockquote>
+                    <p>
+                      I just want to know if my mom is okay without spying on her.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      Group texts are chaotic. I need a real care-circle app.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I would happily subscribe just for peace of mind.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I’m constantly worried because she lives alone… is this just how life is now?
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I don’t want to bother them every day… but I still want to know they’re okay.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      If they miss a check-in, I want to know immediately.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I need something that tells me if something’s wrong — not something that watches them all day.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I’m tired of piecing everything together from texts, notes, and apps.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I wish there was one place that just tells me: should I be worried today?
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      They always say they’re fine… but I don’t know if that’s true.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I need something that works even if they forget to use their phone.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I’m juggling meds, moods, appointments… it’s exhausting to track everything.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I don’t want to wait until something bad happens to find out.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I just want a simple way for my whole family to stay on the same page.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+                <article class="thoughts-slide" aria-hidden="true">
+                  <blockquote>
+                    <p>
+                      I want to help without making them feel like I’m watching them.
+                    </p>
+                  </blockquote>
+                  <p class="thoughts-attribution">Shared anonymously</p>
+                </article>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="thoughts-btn thoughts-btn--next"
+              aria-label="Next thought"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+
+            <nav
+              class="thoughts-dots"
+              aria-label="Choose a thought"
+            ></nav>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="faq-section"
+        id="faq"
+        aria-labelledby="faq-heading"
+      >
+        <div class="faq-shell">
+          <div class="faq-panel">
+            <p class="features-kicker faq-kicker">FAQ</p>
+            <h2 id="faq-heading">Hunny — Frequently Asked Questions</h2>
+            <p class="faq-lead">
+              Tap a question to expand the answer. Straight talk on what Hunny is,
+              privacy, and how to get started.
+            </p>
+
+            <div class="faq-category">
+              <h3 class="faq-category-title">🧠 Understanding Hunny</h3>
+
+              <details class="faq-item">
+                <summary class="faq-summary">1. What is Hunny?</summary>
+                <div class="faq-answer">
+                  <p>
+                    Hunny is an AI-powered companion that checks in on your loved ones
+                    through natural conversations — and turns those interactions into
+                    simple updates and alerts for you.
+                  </p>
+                  <p>Instead of constant monitoring, Hunny answers one question:</p>
+                  <p><strong>&ldquo;Are they okay today?&rdquo;</strong></p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">2. Who is Hunny for?</summary>
+                <div class="faq-answer">
+                  <p>Hunny is designed for families who care about someone but can&rsquo;t always be there:</p>
+                  <ul>
+                    <li>Aging parents living alone</li>
+                    <li>Busy families with children</li>
+                    <li>Neurodivergent or autistic individuals</li>
+                    <li>Loved ones dealing with emotional or mental health challenges</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">3. How is this different from other apps?</summary>
+                <div class="faq-answer">
+                  <p><strong>Most tools are:</strong></p>
+                  <ul>
+                    <li>❌ Too invasive (cameras, trackers)</li>
+                    <li>❌ Too manual (calls, texts, spreadsheets)</li>
+                    <li>❌ Too clinical (medical, stressful)</li>
+                  </ul>
+                  <p><strong>Hunny is:</strong></p>
+                  <ul>
+                    <li>✅ Non-intrusive</li>
+                    <li>✅ Conversation-based</li>
+                    <li>✅ Family-centered</li>
+                    <li>✅ Signal-focused (not diagnosis)</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-category">
+              <h3 class="faq-category-title">💛 Privacy &amp; trust (biggest objections)</h3>
+
+              <details class="faq-item">
+                <summary class="faq-summary">4. Is Hunny spying on my loved one?</summary>
+                <div class="faq-answer">
+                  <p><strong>No.</strong></p>
+                  <p>Hunny does not use:</p>
+                  <ul>
+                    <li>Cameras</li>
+                    <li>Constant tracking</li>
+                    <li>Surveillance</li>
+                  </ul>
+                  <p>It only learns from natural conversations, just like texting or chatting.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">5. Will my loved one feel monitored or controlled?</summary>
+                <div class="faq-answer">
+                  <p>
+                    No — Hunny is designed to feel like a friendly companion, not a tool.
+                  </p>
+                  <p>
+                    This is critical because caregivers consistently reject tools that feel
+                    invasive or controlling.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">6. Does Hunny make medical decisions or diagnoses?</summary>
+                <div class="faq-answer">
+                  <p><strong>No.</strong></p>
+                  <p><strong>Hunny:</strong></p>
+                  <ul>
+                    <li>❌ Does NOT diagnose</li>
+                    <li>❌ Does NOT replace doctors</li>
+                    <li>✅ Only provides signals and summaries</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-category">
+              <h3 class="faq-category-title">⚙️ How it works</h3>
+
+              <details class="faq-item">
+                <summary class="faq-summary">7. What actually happens day-to-day?</summary>
+                <div class="faq-answer">
+                  <ul>
+                    <li>Hunny checks in through casual conversation</li>
+                    <li>It observes patterns (mood, routine, engagement)</li>
+                    <li>You get a simple summary</li>
+                    <li>You&rsquo;re alerted only if something feels off</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">8. What kind of alerts will I get?</summary>
+                <div class="faq-answer">
+                  <p>Only meaningful ones, like:</p>
+                  <ul>
+                    <li>Missed routines</li>
+                    <li>Sudden disengagement</li>
+                    <li>Unusual behavior patterns</li>
+                  </ul>
+                  <p>Not constant notifications.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">9. What if nothing is wrong?</summary>
+                <div class="faq-answer">
+                  <p>You&rsquo;ll just see a calm update like:</p>
+                  <p>👉 <strong>&ldquo;Everything looks normal today.&rdquo;</strong></p>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-category">
+              <h3 class="faq-category-title">👨‍👩‍👧‍👦 Family &amp; care coordination</h3>
+
+              <details class="faq-item">
+                <summary class="faq-summary">10. Can multiple family members use it?</summary>
+                <div class="faq-answer">
+                  <p><strong>Yes.</strong></p>
+                  <p>Hunny is built for care circles, so:</p>
+                  <ul>
+                    <li>Everyone stays updated</li>
+                    <li>No more chaotic group texts</li>
+                    <li>Shared context in one place</li>
+                  </ul>
+                  <p>
+                    (This is one of the biggest unmet needs caregivers complain about.)
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">11. Can I customize what I see?</summary>
+                <div class="faq-answer">
+                  <p><strong>Yes.</strong></p>
+                  <p>You can choose:</p>
+                  <ul>
+                    <li>What data is shared</li>
+                    <li>Who sees what</li>
+                    <li>How often you get updates</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-category">
+              <h3 class="faq-category-title">🧩 Real problems it solves</h3>
+
+              <details class="faq-item">
+                <summary class="faq-summary">12. Why do people actually need this?</summary>
+                <div class="faq-answer">
+                  <p>Because caregivers today face 3 constant problems:</p>
+                  <ul>
+                    <li><strong>&ldquo;Is something wrong?&rdquo;</strong> (uncertainty)</li>
+                    <li><strong>&ldquo;Am I doing enough?&rdquo;</strong> (guilt)</li>
+                    <li><strong>&ldquo;Why is this so hard to manage?&rdquo;</strong> (friction)</li>
+                  </ul>
+                  <p>Hunny reduces all three.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">13. Why not just call or text them?</summary>
+                <div class="faq-answer">
+                  <p>Because:</p>
+                  <ul>
+                    <li>People say &ldquo;I&rsquo;m fine&rdquo; even when they&rsquo;re not</li>
+                    <li>You can&rsquo;t check constantly</li>
+                    <li>It creates guilt on both sides</li>
+                  </ul>
+                  <p>Families want signals, not guesswork.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">14. Why not use existing apps?</summary>
+                <div class="faq-answer">
+                  <p>Most people already try:</p>
+                  <ul>
+                    <li>Notes</li>
+                    <li>Spreadsheets</li>
+                    <li>Group chats</li>
+                    <li>Random apps</li>
+                  </ul>
+                  <p>But they&rsquo;re fragmented and exhausting.</p>
+                  <p>Hunny replaces all of that with one clear system.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-category">
+              <h3 class="faq-category-title">💰 Pricing &amp; access</h3>
+
+              <details class="faq-item">
+                <summary class="faq-summary">15. How much does it cost?</summary>
+                <div class="faq-answer">
+                  <p>Hunny will be a subscription-based app (family plan).</p>
+                  <p><strong>💡 Early users on the waitlist will get:</strong></p>
+                  <ul>
+                    <li>Early access</li>
+                    <li>Special pricing</li>
+                    <li>Priority features</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">16. When can I use it?</summary>
+                <div class="faq-answer">
+                  <p>We&rsquo;re currently building and testing Hunny.</p>
+                  <p>
+                    👉
+                    <a
+                      href="https://forms.gle/kX37U6EPFZKsK2ZX6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Join the waitlist</a
+                    >
+                    to get early access.
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-category">
+              <h3 class="faq-category-title">🚨 Risk / edge questions (high trust)</h3>
+
+              <details class="faq-item">
+                <summary class="faq-summary">17. What if Hunny misses something?</summary>
+                <div class="faq-answer">
+                  <p>Hunny is designed to:</p>
+                  <ul>
+                    <li>Reduce risk</li>
+                    <li>Provide early signals</li>
+                  </ul>
+                  <p>But it is not a replacement for human care or emergency services.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">18. What if my loved one doesn&rsquo;t like using apps?</summary>
+                <div class="faq-answer">
+                  <p>That&rsquo;s exactly why Hunny exists.</p>
+                  <p>It&rsquo;s designed to:</p>
+                  <ul>
+                    <li>Feel natural (conversation-based)</li>
+                    <li>Require minimal effort</li>
+                    <li>Avoid complex interfaces</li>
+                  </ul>
+                  <p>Because many caregivers say:</p>
+                  <p>👉 <strong>&ldquo;My parent won&rsquo;t use tech anyway.&rdquo;</strong></p>
+                </div>
+              </details>
+            </div>
+
+            <div class="faq-category">
+              <h3 class="faq-category-title">🌱 Why we&rsquo;re building Hunny</h3>
+
+              <details class="faq-item">
+                <summary class="faq-summary">19. Why did you build Hunny?</summary>
+                <div class="faq-answer">
+                  <p>Because families aren&rsquo;t asking for monitoring.</p>
+                  <p>They&rsquo;re asking for:</p>
+                  <ul>
+                    <li>Peace of mind</li>
+                    <li>Less guilt</li>
+                    <li>A simple way to know their loved ones are okay</li>
+                  </ul>
+                  <p>And that doesn&rsquo;t exist yet.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-summary">20. How do I get started?</summary>
+                <div class="faq-answer">
+                  <ul class="faq-answer-list--plain">
+                    <li>
+                      👉
+                      <a
+                        href="https://forms.gle/kX37U6EPFZKsK2ZX6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Join the waitlist</a
+                      >
+                    </li>
+                    <li>👉 Invite your family</li>
+                    <li>👉 Be part of shaping Hunny</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact-section"
+        id="contact"
+        aria-label="Contact section"
+      >
+        <div class="features-layout contact-layout">
+          <div class="features-copy">
+            <p class="features-kicker">Contact Us</p>
+            <h2>Join our WaitList</h2>
+            <p>
+              Have questions or want updates about Hunny? Join the waitlist and
+              we&apos;ll follow up.
+            </p>
+            <div class="cta-wrap">
+              <a
+                href="https://forms.gle/kX37U6EPFZKsK2ZX6"
+                class="cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Join our waitlist!</a
+              >
+            </div>
+            <div class="contact-details" aria-label="Other ways to reach Hunny">
+              <p class="contact-detail">
+                <span class="contact-detail-label">Email</span>
+                <a
+                  class="contact-link"
+                  href="mailto:hunny.app.official@gmail.com"
+                  >hunny.app.official@gmail.com</a
+                >
+              </p>
+              <p class="contact-detail">
+                <span class="contact-detail-label">Instagram &amp; Threads</span>
+                <span class="contact-social-row">
+                  <a
+                    class="contact-link"
+                    href="https://www.instagram.com/hunny.family/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram</a
+                  >
+                  <span class="contact-social-sep" aria-hidden="true">·</span>
+                  <a
+                    class="contact-link"
+                    href="https://www.threads.net/@hunny.family"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Threads</a
+                  >
+                  <span class="contact-handle">@hunny.family</span>
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </section>

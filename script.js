@@ -80,3 +80,175 @@ setInterval(updateCountdown, 1000);
   window.addEventListener("scroll", onScroll, { passive: true });
   applyParallax();
 })();
+
+(function initThoughtsCarousel() {
+  const root = document.querySelector("[data-thoughts-carousel]");
+  const track = document.getElementById("thoughtsTrack");
+  if (!root || !track) {
+    return;
+  }
+
+  const slides = Array.from(root.querySelectorAll(".thoughts-slide"));
+  const prevBtn = root.querySelector(".thoughts-btn--prev");
+  const nextBtn = root.querySelector(".thoughts-btn--next");
+  const dotsNav = root.querySelector(".thoughts-dots");
+  if (!slides.length || !prevBtn || !nextBtn || !dotsNav) {
+    return;
+  }
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const autoplayMs = reduceMotion ? 0 : 7000;
+  let index = 0;
+  let autoplayId = null;
+  let touchStartX = null;
+
+  function setAria() {
+    slides.forEach((slide, i) => {
+      const on = i === index;
+      slide.setAttribute("aria-hidden", on ? "false" : "true");
+      slide.setAttribute("tabindex", on ? "0" : "-1");
+    });
+  }
+
+  function updateDots() {
+    dotsNav.querySelectorAll(".thoughts-dot").forEach((dot, i) => {
+      const on = i === index;
+      dot.classList.toggle("is-active", on);
+      dot.setAttribute("aria-current", on ? "true" : "false");
+    });
+  }
+
+  function goTo(i) {
+    const n = slides.length;
+    index = ((i % n) + n) % n;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    setAria();
+    updateDots();
+  }
+
+  function next() {
+    goTo(index + 1);
+  }
+
+  function prev() {
+    goTo(index - 1);
+  }
+
+  function stopAutoplay() {
+    if (autoplayId != null) {
+      window.clearInterval(autoplayId);
+      autoplayId = null;
+    }
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    if (autoplayMs > 0) {
+      autoplayId = window.setInterval(next, autoplayMs);
+    }
+  }
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "thoughts-dot";
+    dot.setAttribute("aria-label", `Show thought ${i + 1} of ${slides.length}`);
+    dot.addEventListener("click", () => {
+      goTo(i);
+      startAutoplay();
+    });
+    dotsNav.appendChild(dot);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prev();
+    startAutoplay();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    next();
+    startAutoplay();
+  });
+
+  root.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      prev();
+      startAutoplay();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      next();
+      startAutoplay();
+    }
+  });
+
+  root.addEventListener("mouseenter", stopAutoplay);
+  root.addEventListener("mouseleave", startAutoplay);
+  root.addEventListener("focusin", stopAutoplay);
+  root.addEventListener("focusout", () => {
+    if (!root.contains(document.activeElement)) {
+      startAutoplay();
+    }
+  });
+
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      if (!e.touches.length) {
+        return;
+      }
+      touchStartX = e.touches[0].clientX;
+      root.classList.add("is-dragging");
+    },
+    { passive: true }
+  );
+
+  track.addEventListener(
+    "touchend",
+    (e) => {
+      root.classList.remove("is-dragging");
+      if (touchStartX == null || !e.changedTouches.length) {
+        touchStartX = null;
+        return;
+      }
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(dx) > 48) {
+        if (dx < 0) {
+          next();
+        } else {
+          prev();
+        }
+        startAutoplay();
+      }
+    },
+    { passive: true }
+  );
+
+  goTo(0);
+  startAutoplay();
+})();
+
+(function initPainSolutionsToggle() {
+  const btn = document.getElementById("painSolutionsToggle");
+  const panel = document.getElementById("painSolutionsMore");
+  if (!btn || !panel) {
+    return;
+  }
+
+  const expandLabel = "Show 7 more pain points & solutions";
+  const collapseLabel = "Show fewer";
+
+  btn.addEventListener("click", () => {
+    const willOpen = panel.hasAttribute("hidden");
+    if (willOpen) {
+      panel.removeAttribute("hidden");
+      btn.setAttribute("aria-expanded", "true");
+      btn.textContent = collapseLabel;
+    } else {
+      panel.setAttribute("hidden", "");
+      btn.setAttribute("aria-expanded", "false");
+      btn.textContent = expandLabel;
+    }
+  });
+})();
