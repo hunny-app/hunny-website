@@ -415,6 +415,117 @@ body::before {
   filter: drop-shadow(0 16px 24px rgba(20, 27, 62, 0.34));
 }
 
+/* --- Senior care stats (above everyday moments) --- */
+.stats-section {
+  width: min(1120px, 100%);
+  display: grid;
+  place-items: center;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+  scroll-margin-top: 2rem;
+}
+
+.stats-layout {
+  width: min(980px, 100%);
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(320px, 1fr);
+  align-items: start;
+  justify-content: center;
+  gap: 1.1rem;
+  padding: 1.35rem 1.25rem 1.35rem 0.9rem;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #fff6dd 0%, #f5e3be 48%, #e9cd9e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 22px 40px rgba(74, 56, 28, 0.2);
+}
+
+.stats-copy {
+  padding: 0.35rem 0.2rem 0;
+}
+
+.stats-copy h2 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.45rem, 2.8vw, 2.1rem);
+  line-height: 1.2;
+  color: #463d31;
+}
+
+.stats-lead {
+  margin: 0;
+  color: #655846;
+  line-height: 1.7;
+  max-width: 420px;
+  font-size: 0.98rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 0.75rem;
+  align-content: start;
+  justify-items: stretch;
+}
+
+.stat-card {
+  border-radius: 18px;
+  padding: 0.95rem 0.95rem 0.9rem;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 22px rgba(47, 49, 82, 0.06);
+}
+
+.stat-card--full {
+  grid-column: 1 / -1;
+}
+
+.stat-value {
+  font-size: clamp(1.4rem, 2.4vw, 1.95rem);
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  color: #463d31;
+  line-height: 1.05;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  color: #655846;
+  line-height: 1.55;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 980px) {
+  .stats-layout {
+    grid-template-columns: 1fr;
+    padding: 1.35rem 1.6rem 1.2rem;
+  }
+
+  .stats-copy {
+    padding: 0;
+    text-align: center;
+  }
+
+  .stats-lead {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 560px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .stats-layout {
+    padding: 1.15rem 1rem 1.1rem;
+    gap: 0.9rem;
+  }
+
+  .stat-card {
+    padding: 0.9rem 0.85rem 0.85rem;
+  }
+}
+
 .features-section {
   width: min(1120px, 100%);
   display: grid;
