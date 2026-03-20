@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunny Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+    <div class="thought-bubbles" aria-hidden="true">
+      <div class="thought-bubble-wrap thought-bubble-wrap--1" data-parallax="0.08">
+        <blockquote class="thought-bubble thought-bubble--1">
+          “I just want to know if my mom is okay without spying on her.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--2" data-parallax="0.46">
+        <blockquote class="thought-bubble thought-bubble--2">
+          “Group texts are chaotic. I need a real care-circle app.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--3" data-parallax="0.24">
+        <blockquote class="thought-bubble thought-bubble--3">
+          “I would happily subscribe just for peace of mind.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--4" data-parallax="0.12">
+        <blockquote class="thought-bubble thought-bubble--4">
+          “I’m constantly worried because she lives alone… is this just how life is now?”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--5" data-parallax="0.4">
+        <blockquote class="thought-bubble thought-bubble--5 thought-bubble--tail-right">
+          “I need something that tells me if something’s wrong — not something that watches her all day.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--6" data-parallax="0.06">
+        <blockquote class="thought-bubble thought-bubble--6">
+          “I don’t want to bother them every day… but I still want to know they’re okay.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--7" data-parallax="0.5">
+        <blockquote class="thought-bubble thought-bubble--7 thought-bubble--tail-right">
+          “If they miss a check-in, I want to know immediately.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--8" data-parallax="0.18">
+        <blockquote class="thought-bubble thought-bubble--8">
+          “I’m tired of piecing everything together from texts, notes, and apps.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--9" data-parallax="0.36">
+        <blockquote class="thought-bubble thought-bubble--9 thought-bubble--tail-right">
+          “I wish there was one place that just tells me: should I be worried today?”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--10" data-parallax="0.2">
+        <blockquote class="thought-bubble thought-bubble--10">
+          “They always say they’re fine… but I don’t know if that’s true.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--11" data-parallax="0.25">
+        <blockquote class="thought-bubble thought-bubble--11 thought-bubble--tail-right">
+          “I need something that works even if they forget to use their phone.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--12" data-parallax="0.04">
+        <blockquote class="thought-bubble thought-bubble--12">
+          “I’m juggling meds, moods, appointments… it’s exhausting to track everything.”
+        </blockquote>
+      </div>
+      <div class="thought-bubble-wrap thought-bubble-wrap--13" data-parallax="0.33">
+        <blockquote class="thought-bubble thought-bubble--13 thought-bubble--tail-right">
+          “I don’t want to wait until something bad happens to find out.”
+        </blockquote>
+      </div>
+    </div>
+    <main class="page">
+      <section class="hero-card">
+        <header class="nav">
+          <div class="logo-wrap">
+            <img class="logo-image" src="./assets/hunny-logo.png" alt="Hunny logo" />
+            <span class="logo-text">Hunny</span>
+          </div>
+          <nav class="menu">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Features</a>
+            <a href="#">Contact Us</a>
+            <a class="login-btn" href="#">Log In</a>
+          </nav>
+        </header>
+
+        <div class="hero-content">
+          <div class="copy">
+            <p class="eyebrow">Family App</p>
+            <h1>HUNNY - </br>Where Family Matters</h1>
+            <p class="description">
+              Create a companion for your family, that checks-in 24 hours a day, no matter where.
+            </p>
+            <div class="cta-wrap">
+              <a
+                href="https://forms.gle/kX37U6EPFZKsK2ZX6"
+                class="cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Join our waitlist!</a>
+              <p class="cta-subline">LIMITED SPOTS! APPLY NOW!</p>
+            </div>
+          </div>
+
+          <div class="art" aria-label="Character art">
+            <img
+              class="character character-girl"
+              src="./assets/girl.png"
+              alt="Girl character"
+            />
+            <img
+              class="character character-boy"
+              src="./assets/boy.png"
+              alt="Boy character"
+            />
+            <img
+              class="character character-bunny"
+              src="./assets/bunny.png"
+              alt="Bunny character"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="egg-section" aria-label="Secondary egg section">
+        <div class="egg-frame">
+          <div class="egg-content">
+            <p class="egg-kicker">Count Down</p>
+            <h2>Count down to launch</h2>
+            <div class="countdown" id="launchCountdown" aria-label="Countdown to launch">
+              <div class="time-box">
+                <span class="time-value" id="days">00</span>
+                <span class="time-label">Days</span>
+              </div>
+              <div class="time-box">
+                <span class="time-value" id="hours">00</span>
+                <span class="time-label">Hours</span>
+              </div>
+              <div class="time-box">
+                <span class="time-value" id="minutes">00</span>
+                <span class="time-label">Minutes</span>
+              </div>
+              <div class="time-box">
+                <span class="time-value" id="seconds">00</span>
+                <span class="time-label">Seconds</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cloud-section" id="about" aria-label="About section">
+        <div class="about-layout">
+          <div class="about-media">
+            <img
+              class="about-chat-image"
+              src="./assets/ai-chat-screen.png"
+              alt="AI chat screen preview"
+            />
+          </div>
+
+          <div class="cloud-frame">
+            <div class="cloud-content">
+              <p class="cloud-kicker">About</p>
+              <h2>What is Hunny?</h2>
+              <p>
+                Hunny is a friendly family companion that keeps everyone connected
+                with simple updates, helpful reminders, and always-on support you
+                can trust.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="chat-image-section daily-activities-section"
+        aria-label="Daily activities preview"
+      >
+        <div class="daily-activities-layout">
+          <div class="chat-image-frame">
+            <img
+              class="chat-image"
+              src="./assets/daily-activities.png"
+              alt="Daily activities sharing preview"
+            />
+          </div>
+
+          <div class="daily-activities-copy">
+            <p class="daily-kicker">Daily Activities</p>
+            <h2>Stay close through everyday moments</h2>
+            <p>
+              Hunny shares photo updates and quick notes so family members can
+              stay connected, even during a busy day.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section" aria-label="Hunny features">
+        <div class="features-layout">
+          <div class="features-copy">
+            <p class="features-kicker">Hunny Features</p>
+            <h2>Everything your family needs in one companion</h2>
+            <p>
+              Hunny is built to keep everyone connected, supported, and updated
+              with thoughtful tools for everyday family life.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card feature-card-purple">
+              <h3>Smart Check-ins</h3>
+              <p>Gentle reminders and updates throughout the day.</p>
+            </article>
+            <article class="feature-card feature-card-lime">
+              <h3>Healthy Nudges</h3>
+              <p>Prompts for meals, water, rest, and movement.</p>
+            </article>
+            <article class="feature-card feature-card-orange">
+              <h3>Memory Moments</h3>
+              <p>Save photos and short notes your family can revisit.</p>
+            </article>
+            <article class="feature-card feature-card-green">
+              <h3>24/7 Support</h3>
+              <p>Always-on support when loved ones need a companion.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
