@@ -6,9 +6,13 @@
 
   const emailInput = document.getElementById("waitlistEmail");
   const nameInput = document.getElementById("waitlistName");
-  const hpInput = document.getElementById("waitlistWebsite");
+  const hpInput = document.getElementById("waitlistHp");
   const submitBtn = document.getElementById("waitlistSubmit");
   const statusEl = document.getElementById("waitlistStatus");
+
+  if (hpInput) {
+    hpInput.value = "";
+  }
 
   function setStatus(message, isError) {
     if (!statusEl) {

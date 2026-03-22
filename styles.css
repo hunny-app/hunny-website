@@ -1388,8 +1388,9 @@ body::before {
 .waitlist-block {
   scroll-margin-top: 1.25rem;
   width: 100%;
-  max-width: 420px;
+  max-width: min(420px, 100%);
   margin: 0 auto;
+  min-width: 0;
 }
 
 .waitlist-block > p {
@@ -1397,25 +1398,32 @@ body::before {
 }
 
 .waitlist-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  text-align: left;
+  width: 100%;
+  min-width: 0;
+}
+
+.waitlist-field {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 0.35rem;
-  text-align: left;
   width: 100%;
+  margin-bottom: 0.75rem;
 }
 
 .waitlist-label {
-  margin-top: 0.35rem;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #8a7a68;
-}
-
-.waitlist-label:first-of-type {
-  margin-top: 0;
+  text-align: left;
 }
 
 .waitlist-optional {
@@ -1453,18 +1461,29 @@ body::before {
 
 .waitlist-hp {
   position: absolute;
+  left: -10000px;
+  top: 0;
   width: 1px;
   height: 1px;
+  margin: 0;
   padding: 0;
-  margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
+  pointer-events: none;
+}
+
+.waitlist-hp-label,
+.waitlist-hp input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
 }
 
 .waitlist-submit {
-  margin-top: 0.65rem;
+  margin-top: 0.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1500,6 +1519,11 @@ body::before {
   line-height: 1.45;
   color: #3d5a40;
   text-align: center;
+}
+
+.waitlist-status[hidden] {
+  display: none !important;
+  margin: 0;
 }
 
 .waitlist-status--error {

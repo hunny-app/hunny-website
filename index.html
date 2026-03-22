@@ -1053,37 +1053,42 @@
               name="waitlist"
               novalidate
             >
-              <label class="waitlist-label" for="waitlistEmail">Email</label>
-              <input
-                id="waitlistEmail"
-                class="waitlist-input"
-                type="email"
-                name="email"
-                autocomplete="email"
-                inputmode="email"
-                required
-                placeholder="you@example.com"
-              />
-              <label class="waitlist-label" for="waitlistName"
-                >Name <span class="waitlist-optional">(optional)</span></label
-              >
-              <input
-                id="waitlistName"
-                class="waitlist-input"
-                type="text"
-                name="name"
-                autocomplete="name"
-                maxlength="120"
-                placeholder="First name or how we should address you"
-              />
-              <div class="waitlist-hp" aria-hidden="true">
-                <label for="waitlistWebsite">Website</label>
+              <div class="waitlist-field">
+                <label class="waitlist-label" for="waitlistEmail">Email</label>
                 <input
-                  id="waitlistWebsite"
-                  name="website"
+                  id="waitlistEmail"
+                  class="waitlist-input"
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  inputmode="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div class="waitlist-field">
+                <label class="waitlist-label" for="waitlistName"
+                  >Name <span class="waitlist-optional">(optional)</span></label
+                >
+                <input
+                  id="waitlistName"
+                  class="waitlist-input"
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  maxlength="120"
+                  placeholder="How we should address you"
+                />
+              </div>
+              <div class="waitlist-hp" aria-hidden="true">
+                <label class="waitlist-hp-label" for="waitlistHp">Leave blank</label>
+                <input
+                  id="waitlistHp"
+                  name="wl_hp_confirm"
                   type="text"
                   tabindex="-1"
                   autocomplete="off"
+                  value=""
                 />
               </div>
               <button id="waitlistSubmit" class="waitlist-submit" type="submit">
