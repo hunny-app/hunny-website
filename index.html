@@ -93,6 +93,7 @@
             <a href="#about">About Us</a>
             <a href="#features">Features</a>
             <a href="#faq">FAQ</a>
+            <a href="#waitlist">Waitlist</a>
             <a href="#contact">Contact Us</a>
           </nav>
         </header>
@@ -106,12 +107,7 @@
             </p>
             <div class="cta-wrap">
               <div class="cta-row" role="group" aria-label="Hero actions">
-                <a
-                  href="https://forms.gle/kX37U6EPFZKsK2ZX6"
-                  class="cta"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Join our waitlist!</a>
+                <a href="#waitlist" class="cta">Join our waitlist!</a>
                 <a href="#community-voices" class="cta cta--secondary">Community voices</a>
               </div>
               <p class="cta-subline">LIMITED SPOTS! APPLY NOW!</p>
@@ -963,12 +959,7 @@
                   <p>We&rsquo;re currently building and testing Hunny.</p>
                   <p>
                     👉
-                    <a
-                      href="https://forms.gle/kX37U6EPFZKsK2ZX6"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Join the waitlist</a
-                    >
+                    <a href="#waitlist">Join the waitlist</a>
                     to get early access.
                   </p>
                 </div>
@@ -1029,12 +1020,7 @@
                   <ul class="faq-answer-list--plain">
                     <li>
                       👉
-                      <a
-                        href="https://forms.gle/kX37U6EPFZKsK2ZX6"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Join the waitlist</a
-                      >
+                      <a href="#waitlist">Join the waitlist</a>
                     </li>
                     <li>👉 Invite your family</li>
                     <li>👉 Be part of shaping Hunny</li>
@@ -1049,24 +1035,72 @@
       <section
         class="contact-section"
         id="contact"
-        aria-label="Contact section"
+        aria-label="Contact and waitlist section"
       >
         <div class="features-layout contact-layout">
           <div class="features-copy">
             <p class="features-kicker">Contact Us</p>
-            <h2>Join our WaitList</h2>
+            <div id="waitlist" class="waitlist-block">
+            <h2>Join our waitlist</h2>
             <p>
-              Have questions or want updates about Hunny? Join the waitlist and
-              we&apos;ll follow up.
+              Have questions or want updates about Hunny? Add your email below and
+              we&apos;ll follow up. You can still reach us directly using the links
+              under the form.
             </p>
-            <div class="cta-wrap">
-              <a
-                href="https://forms.gle/kX37U6EPFZKsK2ZX6"
-                class="cta"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Join our waitlist!</a
+            <form
+              id="waitlistForm"
+              class="waitlist-form"
+              name="waitlist"
+              novalidate
+            >
+              <label class="waitlist-label" for="waitlistEmail">Email</label>
+              <input
+                id="waitlistEmail"
+                class="waitlist-input"
+                type="email"
+                name="email"
+                autocomplete="email"
+                inputmode="email"
+                required
+                placeholder="you@example.com"
+              />
+              <label class="waitlist-label" for="waitlistName"
+                >Name <span class="waitlist-optional">(optional)</span></label
               >
+              <input
+                id="waitlistName"
+                class="waitlist-input"
+                type="text"
+                name="name"
+                autocomplete="name"
+                maxlength="120"
+                placeholder="First name or how we should address you"
+              />
+              <div class="waitlist-hp" aria-hidden="true">
+                <label for="waitlistWebsite">Website</label>
+                <input
+                  id="waitlistWebsite"
+                  name="website"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+              <button id="waitlistSubmit" class="waitlist-submit" type="submit">
+                Join the waitlist
+              </button>
+              <p
+                id="waitlistStatus"
+                class="waitlist-status"
+                role="status"
+                aria-live="polite"
+                hidden
+              ></p>
+              <p class="waitlist-privacy">
+                We store signups in a secure database and only use your email for
+                Hunny-related updates. We don&apos;t sell addresses.
+              </p>
+            </form>
             </div>
             <div class="contact-details" aria-label="Other ways to reach Hunny">
               <p class="contact-detail">
@@ -1104,6 +1138,8 @@
       </section>
     </main>
     </div>
+    <script src="waitlist-config.js"></script>
+    <script src="waitlist.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
