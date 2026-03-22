@@ -264,27 +264,3 @@ setInterval(updateCountdown, 1000);
     startAutoplay();
   });
 })();
-
-(function initPainSolutionsToggle() {
-  const btn = document.getElementById("painSolutionsToggle");
-  const panel = document.getElementById("painSolutionsMore");
-  if (!btn || !panel) {
-    return;
-  }
-
-  const expandLabel = "Show 7 more pain points & solutions";
-  const collapseLabel = "Show fewer";
-
-  btn.addEventListener("click", () => {
-    const willOpen = panel.hasAttribute("hidden");
-    if (willOpen) {
-      panel.removeAttribute("hidden");
-      btn.setAttribute("aria-expanded", "true");
-      btn.textContent = collapseLabel;
-    } else {
-      panel.setAttribute("hidden", "");
-      btn.setAttribute("aria-expanded", "false");
-      btn.textContent = expandLabel;
-    }
-  });
-})();

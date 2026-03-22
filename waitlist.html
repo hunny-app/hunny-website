@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunny — Join the waitlist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="page quiz-page" id="waitlist-main">
+        <div class="quiz-card waitlist-page-card" data-quiz-card aria-labelledby="waitlist-page-heading">
+          <header class="quiz-top">
+            <a href="index.html" class="quiz-logo-link" aria-label="Hunny home">
+              <img class="quiz-logo-img" src="./assets/hunny-logo.png" alt="" width="36" height="36" />
+              <span class="quiz-logo-text">Hunny</span>
+            </a>
+            <a href="check.html" class="quiz-back-link">Back to check</a>
+          </header>
+
+          <p class="quiz-eyebrow">Early access</p>
+          <h1 class="quiz-title" id="waitlist-page-heading">Join the waitlist</h1>
+          <p class="quiz-lead waitlist-page-lead">
+            Get early access and Hunny updates. Add your email below.
+          </p>
+
+          <div class="waitlist-block waitlist-page-form-wrap" id="waitlist">
+            <form
+              id="waitlistForm"
+              class="waitlist-form"
+              name="waitlist"
+              novalidate
+            >
+              <div class="waitlist-field">
+                <label class="waitlist-label" for="waitlistEmail">Email</label>
+                <input
+                  id="waitlistEmail"
+                  class="waitlist-input"
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  inputmode="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div class="waitlist-field">
+                <label class="waitlist-label" for="waitlistName"
+                  >Name <span class="waitlist-optional">(optional)</span></label
+                >
+                <input
+                  id="waitlistName"
+                  class="waitlist-input"
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  maxlength="120"
+                  placeholder="How we should address you"
+                />
+              </div>
+              <div class="waitlist-hp" aria-hidden="true">
+                <label class="waitlist-hp-label" for="waitlistHp">Leave blank</label>
+                <input
+                  id="waitlistHp"
+                  name="wl_hp_confirm"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                  value=""
+                />
+              </div>
+              <button id="waitlistSubmit" class="waitlist-submit" type="submit">
+                Join the waitlist
+              </button>
+              <p
+                id="waitlistStatus"
+                class="waitlist-status"
+                role="status"
+                aria-live="polite"
+                hidden
+              ></p>
+              <p class="waitlist-privacy">
+                We store signups in a secure database and only use your email for
+                Hunny-related updates. We don&apos;t sell addresses.
+              </p>
+            </form>
+          </div>
+
+          <p class="waitlist-page-home">
+            <a href="index.html" class="quiz-back-link">Full site</a>
+          </p>
+        </div>
+      </main>
+    </div>
+    <script src="waitlist-config.js"></script>
+    <script src="waitlist.js"></script>
+  </body>
+</html>

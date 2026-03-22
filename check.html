@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="quiz-check">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunny — 30-second check</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="page quiz-page" id="quiz-main">
+        <div class="quiz-card" data-quiz-card>
+          <header class="quiz-top">
+            <a href="index.html" class="quiz-logo-link" aria-label="Hunny home">
+              <img class="quiz-logo-img" src="./assets/hunny-logo.png" alt="" width="36" height="36" />
+              <span class="quiz-logo-text">Hunny</span>
+            </a>
+            <a href="index.html" class="quiz-back-link">Back to site</a>
+          </header>
+
+          <div class="quiz-progress-block" id="quizProgressBlock" hidden>
+            <p class="quiz-progress" id="quizProgress" aria-live="polite"></p>
+            <div
+              class="quiz-progress-bar"
+              id="quizProgressBar"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              aria-label="Check progress"
+            >
+              <div class="quiz-progress-bar-fill" id="quizProgressFill"></div>
+            </div>
+          </div>
+
+          <div class="quiz-steps" id="quizSteps">
+            <!-- Entry -->
+            <section
+              class="quiz-step quiz-step--entry is-active"
+              data-step="0"
+              role="region"
+              aria-labelledby="quiz-entry-heading"
+            >
+              <div class="quiz-entry-inner">
+                <div class="quiz-entry-bunny" aria-hidden="true">
+                  <img
+                    class="quiz-entry-bunny-img"
+                    src="./assets/hunny-bunny.png"
+                    alt=""
+                    width="140"
+                    height="180"
+                    decoding="async"
+                  />
+                </div>
+                <p class="quiz-eyebrow">30-second check</p>
+                <h1 class="quiz-title" id="quiz-entry-heading">You care about them.</h1>
+                <p class="quiz-lead quiz-lead--hook">
+                  But&hellip; do you actually know they&rsquo;re okay?
+                </p>
+                <button type="button" class="cta quiz-start-btn" data-next>
+                  👉 Start 30-sec check
+                </button>
+
+                <p class="quiz-waitlist-inline">
+                  <a href="waitlist.html" class="cta cta--secondary quiz-waitlist-mini">Join the waitlist</a>
+                </p>
+              </div>
+            </section>
+
+            <!-- Q1 -->
+            <section class="quiz-step" data-step="1" role="region" aria-labelledby="q1-label" hidden>
+              <p class="quiz-q-index">1 of 10</p>
+              <h2 class="quiz-question" id="q1-label">Who are you most worried about?</h2>
+              <div class="quiz-options" role="group" aria-labelledby="q1-label">
+                <button type="button" class="quiz-option" data-answer="who" data-value="parent">My parent / grandparent</button>
+                <button type="button" class="quiz-option" data-answer="who" data-value="child">My child</button>
+                <button type="button" class="quiz-option" data-answer="who" data-value="partner">My partner</button>
+                <button type="button" class="quiz-option" data-answer="who" data-value="other">Someone else I care about</button>
+              </div>
+            </section>
+
+            <!-- Facts (between Q1 and Q2) -->
+            <section
+              class="quiz-step quiz-step--facts"
+              data-step="2"
+              role="region"
+              aria-labelledby="facts-label"
+              hidden
+            >
+              <p class="quiz-q-index">2 of 10</p>
+              <h2 class="quiz-question" id="facts-label">Did you know that&hellip;</h2>
+              <ul class="quiz-facts-list">
+                <li
+                  class="quiz-fact"
+                  aria-label="One quarter: seniors are facing loneliness"
+                >
+                  <div class="quiz-fact-stat-wrap">
+                    <span class="quiz-fact-stat">1/4</span>
+                  </div>
+                  <div class="quiz-fact-body">
+                    <span class="quiz-fact-copy">seniors are facing loneliness</span>
+                  </div>
+                </li>
+                <li
+                  class="quiz-fact"
+                  aria-label="One quarter of seniors aged 65 and older fall every year"
+                >
+                  <div class="quiz-fact-stat-wrap">
+                    <span class="quiz-fact-stat">1/4</span>
+                  </div>
+                  <div class="quiz-fact-body">
+                    <span class="quiz-fact-copy">of seniors (65+) fall every year</span>
+                  </div>
+                </li>
+                <li
+                  class="quiz-fact"
+                  aria-label="About 50 percent: of seniors who cannot get up within one hour, many die within six months"
+                >
+                  <div class="quiz-fact-stat-wrap">
+                    <span class="quiz-fact-stat">~50%</span>
+                  </div>
+                  <div class="quiz-fact-body">
+                    <span class="quiz-fact-copy"
+                      >of seniors who can&rsquo;t get up within 1 hour die within 6 months</span
+                    >
+                  </div>
+                </li>
+                <li
+                  class="quiz-fact"
+                  aria-label="About 60 percent of caregivers have no tools to remotely detect early health decline"
+                >
+                  <div class="quiz-fact-stat-wrap">
+                    <span class="quiz-fact-stat">~60%</span>
+                  </div>
+                  <div class="quiz-fact-body">
+                    <span class="quiz-fact-copy"
+                      >of caregivers have no tools to remotely detect early health decline</span
+                    >
+                  </div>
+                </li>
+              </ul>
+              <div class="quiz-fact-punch" role="group" aria-labelledby="facts-punch-label">
+                <p class="quiz-fact-kicker" id="facts-punch-label">Too late</p>
+                <p class="quiz-fact-outro">Signals are missed until a big crisis happens.</p>
+              </div>
+              <button type="button" class="cta quiz-start-btn" data-next>Continue</button>
+            </section>
+
+            <!-- Q2 -->
+            <section class="quiz-step" data-step="3" role="region" aria-labelledby="q2-label" hidden>
+              <p class="quiz-q-index">3 of 10</p>
+              <h2 class="quiz-question" id="q2-label">How often are you physically with them?</h2>
+              <div class="quiz-options" role="group" aria-labelledby="q2-label">
+                <button type="button" class="quiz-option" data-answer="distance" data-value="daily">Every day</button>
+                <button type="button" class="quiz-option" data-answer="distance" data-value="few_week">A few times a week</button>
+                <button type="button" class="quiz-option" data-answer="distance" data-value="rarely">Rarely</button>
+                <button type="button" class="quiz-option" data-answer="distance" data-value="far">We live far apart</button>
+              </div>
+            </section>
+
+            <!-- Q3 -->
+            <section class="quiz-step" data-step="4" role="region" aria-labelledby="q3-label" hidden>
+              <p class="quiz-q-index">4 of 10</p>
+              <h2 class="quiz-question" id="q3-label">How do you usually check if they&rsquo;re okay?</h2>
+              <div class="quiz-options" role="group" aria-labelledby="q3-label">
+                <button type="button" class="quiz-option" data-answer="checkin" data-value="calls">Calls</button>
+                <button type="button" class="quiz-option" data-answer="checkin" data-value="texts">Texts</button>
+                <button type="button" class="quiz-option" data-answer="checkin" data-value="group">Group chats</button>
+                <button type="button" class="quiz-option" data-answer="checkin" data-value="none">I don&rsquo;t have a system</button>
+              </div>
+            </section>
+
+            <!-- Q4 -->
+            <section class="quiz-step" data-step="5" role="region" aria-labelledby="q4-label" hidden>
+              <p class="quiz-q-index">5 of 10</p>
+              <h2 class="quiz-question" id="q4-label">
+                When they say &ldquo;I&rsquo;m fine&rdquo;&hellip; do you fully believe it?
+              </h2>
+              <div class="quiz-options" role="group" aria-labelledby="q4-label">
+                <button type="button" class="quiz-option" data-answer="trust" data-value="yes">Yes</button>
+                <button type="button" class="quiz-option" data-answer="trust" data-value="mostly">Most of the time</button>
+                <button type="button" class="quiz-option" data-answer="trust" data-value="not_really">Not really</button>
+                <button type="button" class="quiz-option" data-answer="trust" data-value="unsure">I&rsquo;m not sure</button>
+              </div>
+            </section>
+
+            <!-- Q5 -->
+            <section class="quiz-step" data-step="6" role="region" aria-labelledby="q5-label" hidden>
+              <p class="quiz-q-index">6 of 10</p>
+              <h2 class="quiz-question" id="q5-label">Have you ever felt worried when they didn&rsquo;t reply?</h2>
+              <div class="quiz-options" role="group" aria-labelledby="q5-label">
+                <button type="button" class="quiz-option" data-answer="silence" data-value="often">Yes, often</button>
+                <button type="button" class="quiz-option" data-answer="silence" data-value="sometimes">Sometimes</button>
+                <button type="button" class="quiz-option" data-answer="silence" data-value="rarely">Rarely</button>
+                <button type="button" class="quiz-option" data-answer="silence" data-value="never">Never</button>
+              </div>
+            </section>
+
+            <!-- Q6 -->
+            <section class="quiz-step" data-step="7" role="region" aria-labelledby="q6-label" hidden>
+              <p class="quiz-q-index">7 of 10</p>
+              <h2 class="quiz-question" id="q6-label">What happens if they don&rsquo;t respond?</h2>
+              <div class="quiz-options" role="group" aria-labelledby="q6-label">
+                <button type="button" class="quiz-option" data-answer="noresponse" data-value="call_again">I call again</button>
+                <button type="button" class="quiz-option" data-answer="noresponse" data-value="worry">I wait and worry</button>
+                <button type="button" class="quiz-option" data-answer="noresponse" data-value="ask_other">I ask someone else to check</button>
+                <button type="button" class="quiz-option" data-answer="noresponse" data-value="unsure">I&rsquo;m not sure what to do</button>
+              </div>
+            </section>
+
+            <!-- Q7 -->
+            <section class="quiz-step" data-step="8" role="region" aria-labelledby="q7-label" hidden>
+              <p class="quiz-q-index">8 of 10</p>
+              <h2 class="quiz-question" id="q7-label">Do you ever feel like you&rsquo;re not checking enough?</h2>
+              <div class="quiz-options" role="group" aria-labelledby="q7-label">
+                <button type="button" class="quiz-option" data-answer="guilt" data-value="yes">Yes</button>
+                <button type="button" class="quiz-option" data-answer="guilt" data-value="sometimes">Sometimes</button>
+                <button type="button" class="quiz-option" data-answer="guilt" data-value="not_really">Not really</button>
+                <button type="button" class="quiz-option" data-answer="guilt" data-value="no">No</button>
+              </div>
+            </section>
+
+            <!-- Q8 -->
+            <section class="quiz-step" data-step="9" role="region" aria-labelledby="q8-label" hidden>
+              <p class="quiz-q-index">9 of 10</p>
+              <h2 class="quiz-question" id="q8-label">What worries you the most?</h2>
+              <div class="quiz-options" role="group" aria-labelledby="q8-label">
+                <button type="button" class="quiz-option" data-answer="peak" data-value="emergency">Missing an emergency</button>
+                <button type="button" class="quiz-option" data-answer="peak" data-value="early">Not noticing early changes</button>
+                <button type="button" class="quiz-option" data-answer="peak" data-value="late">Being too late</button>
+                <button type="button" class="quiz-option" data-answer="peak" data-value="not_enough">Not doing enough</button>
+              </div>
+            </section>
+
+            <!-- Q9 -->
+            <section class="quiz-step" data-step="10" role="region" aria-labelledby="q9-label" hidden>
+              <p class="quiz-q-index">10 of 10</p>
+              <h2 class="quiz-question" id="q9-label">What would give you peace of mind?</h2>
+              <div class="quiz-options" role="group" aria-labelledby="q9-label">
+                <button type="button" class="quiz-option" data-answer="desire" data-value="daily">Daily reassurance they&rsquo;re okay</button>
+                <button type="button" class="quiz-option" data-answer="desire" data-value="alerts">Alerts only when something is wrong</button>
+                <button type="button" class="quiz-option" data-answer="desire" data-value="summary">A simple summary I can trust</button>
+                <button type="button" class="quiz-option" data-answer="desire" data-value="all">All of the above</button>
+              </div>
+            </section>
+
+            <!-- Result -->
+            <section
+              class="quiz-step quiz-step--result"
+              data-step="11"
+              role="region"
+              aria-labelledby="quiz-result-heading"
+              hidden
+            >
+              <div class="quiz-result-hero">
+                <h2 class="quiz-result-kicker">Your result</h2>
+                <h1 class="quiz-title quiz-title--result" id="quiz-result-heading">
+                  You&rsquo;re doing your best.
+                </h1>
+                <p class="quiz-lead quiz-lead--result-gap">But right now&hellip; you&rsquo;re still guessing.</p>
+              </div>
+
+              <div class="quiz-insight">
+                <h3 class="quiz-insight-title">Personalized insight</h3>
+                <p class="quiz-insight-intro">You&rsquo;re relying on:</p>
+                <ul class="quiz-insight-list" id="quizInsightList"></ul>
+                <p class="quiz-insight-outro" id="quizInsightOutro"></p>
+              </div>
+
+              <div class="quiz-solution">
+                <p class="quiz-solution-lead">What if you didn&rsquo;t have to guess?</p>
+                <p>
+                  Hunny quietly checks in for you. And tells you when something feels off.
+                </p>
+                <ul class="quiz-reassurance">
+                  <li>No cameras</li>
+                  <li>No tracking</li>
+                  <li>No constant checking</li>
+                </ul>
+              </div>
+
+              <div class="quiz-result-ctas">
+                <a href="waitlist.html" class="cta quiz-result-cta" id="quizPrimaryCta">Stop guessing</a>
+                <a href="index.html#what-hunny-is" class="cta cta--secondary quiz-result-secondary">See how it works</a>
+              </div>
+            </section>
+          </div>
+
+          <div class="quiz-footer-nav" id="quizFooterNav" hidden>
+            <button type="button" class="quiz-prev" id="quizPrev" hidden>
+              ← Previous question
+            </button>
+            <p class="quiz-restart-wrap" id="quizRestartWrap" hidden>
+              <button type="button" class="quiz-restart" id="quizRestart">Start over</button>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="quiz.js"></script>
+  </body>
+</html>
